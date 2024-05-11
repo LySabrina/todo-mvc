@@ -1,0 +1,54 @@
+@import "./mixin";
+@import "./theme";
+@import "./function";
+
+.todo-list {
+  padding: 1em;
+  border-radius: 1em;
+}
+.todo-item {
+  &:first-child {
+    border-top-right-radius: 0.5rem;
+    border-top-left-radius: 0.5rem;
+  }
+
+  padding: 1em;
+  display: flex;
+  align-items: center;
+
+  &__title {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  &__info {
+    margin: 0px 1rem 0px 1rem;
+  }
+  &__sub-info {
+    display: flex;
+  }
+  &__priority {
+    width: 1rem;
+    height: 1rem;
+  }
+  &__btns {
+    margin-left: auto;
+    & > button {
+      border: 0;
+      background-color: transparent;
+      width: 1.5rem;
+      &:hover{
+        cursor: pointer;
+      }
+    }
+  }
+  &__edit-btn {
+  }
+}
+
+@include themify($themes) {
+  .todo-item {
+    border-bottom: 1px solid themed("textHover");
+    background-color: themed("todoBG");
+    color: themed("todoText");
+  }
+}

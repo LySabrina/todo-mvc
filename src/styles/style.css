@@ -1,0 +1,58 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  background-color: blue;
+  padding: 1em;
+  border-radius: 1rem;
+  justify-content: space-around;
+  gap: 1em;
+  max-width: 50%;
+}
+.form-editor__input-fields {
+  display: flex;
+  flex-direction: column;
+  border: 0;
+}
+
+@font-face {
+  font-family: Josefin;
+  src: url(../assets/JosefinSans-VariableFont_wght.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Josefin";
+}
+
+#root {
+  min-height: 100vh;
+  position: relative;
+}
+
+header {
+  background-image: url("../assets/images/bg-mobile-dark.jpg");
+  padding: 1em;
+  min-height: 10rem;
+}
+
+.content {
+  width: 100%;
+  position: absolute;
+  top: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.dark-theme header {
+  color: red;
+}
+
+.light-theme header {
+  color: red;
+}
+
+/*# sourceMappingURL=style.css.map */

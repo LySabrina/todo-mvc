@@ -1,0 +1,9 @@
+.form{
+    &__open{
+        margin:auto 0 ;
+        padding:1em;
+        &:hover{
+            cursor: pointer;
+        }
+    }
+}

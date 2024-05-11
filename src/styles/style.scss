@@ -1,0 +1,69 @@
+@import "./function";
+@import "./mixin";
+@import "./theme";
+@import "./TodoItem";
+@import "./Header";
+@import "./_Nav";
+@import "./Modal";
+@import "./Form";
+@font-face {
+  font-family: Josefin;
+  src: url(../assets/JosefinSans-VariableFont_wght.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Josefin";
+}
+body{
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+#root {
+  // min-height: 100vh;
+  position: relative;
+  flex: 1 1 auto;
+}
+
+.container{
+  // display: flex;
+  // justify-content: center;
+  
+  // flex-direction: column;
+}
+//THEME INTEGRATION
+@include themify($themes) {
+  background-color: themed("contentBG");
+  color: themed("todoText");
+
+  header {
+    .sidebar {
+      background-color: themed("todoBG");
+
+      &__list {
+        &-item {
+          &:hover {
+            background-color: themed("contentBG");
+
+            cursor: pointer;
+          }
+        }
+      }
+      button {
+        color: themed("todoText");
+      }
+      .active {
+        background-color: themed("contentBG");
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 40em) {
+  #root {
+    // display: flex;
+    // justify-content: center;
+    
+  }
+}

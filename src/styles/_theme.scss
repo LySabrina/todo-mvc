@@ -1,0 +1,16 @@
+$themes: (
+  dark: (
+    contentBG: hsl(235, 21%, 11%),
+    todoBG: hsl(235, 24%, 19%),
+    todoText: hsl(234, 39%, 85%),
+    textHover: hsl(236, 33%, 92%),
+    bgImgMobile: url("../assets/images/bg-mobile-dark.jpg")
+  ),
+  light: (
+    contentBG: hsl(0, 0%, 98%),
+    todoBG: hsl(236, 33%, 92%),
+    todoText: hsl(233, 11%, 84%),
+    textHover: hsl(236, 9%, 61%),
+    bgImgMobile: url('../assets/images/bg-mobile-light.jpg')
+  ),
+);

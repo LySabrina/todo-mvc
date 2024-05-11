@@ -1,0 +1,36 @@
+.nav{
+    position: absolute;
+    top:0;
+    bottom:0;
+    left:50%;
+    width:50%;
+    background-color: blue;
+    z-index:1;
+    
+    &__setting{
+        padding:1em;
+    }
+    &__list{
+        list-style: none;
+        background-color: white;
+        cursor: pointer;
+        &-btn{
+            background-color: transparent;
+            border:0;
+            &:hover{
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+@include themify($themes) {
+    .nav {
+      background-color: themed("todoBG");
+    }
+  }
+
+.hide{
+    display: none;
+}
+

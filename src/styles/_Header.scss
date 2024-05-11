@@ -1,0 +1,30 @@
+header {
+  // background-image: url("../assets//images/bg-desktop-dark.jpg");
+  background-size: cover;
+  padding: 1em;
+
+  .hamburger {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    z-index: 5;
+    width: 1rem;
+    height: 1rem;
+    background-color: transparent;
+    border:0;
+    &:hover{
+      cursor: pointer;
+    }
+  }
+}
+
+@include themify($themes) {
+  header {
+    background-image: themed(bgImgMobile);
+  }
+}
+
+@media screen and (min-width: 40em) {
+  header {
+  }
+}
